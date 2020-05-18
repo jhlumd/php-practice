@@ -1,23 +1,3 @@
-<?php
-$x = 5; // global scope
-
-function myTest()
-{
-  $x = 10;
-  global $x;
-  // using x inside this function will generate an error
-  echo "<p>Variable x inside function is: $x</p>";
-}
-myTest();
-
-echo "<p>Variable x outside function is: $x</p>";
-
-$coLor = "yellow";
-$color = "red";
-
-$color = "notred";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,30 +11,25 @@ $color = "notred";
 
   <h1>User Profile Page</h1>
 
-  <p>
-    <?php
-    echo "My car is <b>" . $color . "</b>.<br>";
-    echo "My car is " . $coLor . ".<br>";
-    echo "My car is $color.";
-    ?>
-  </p>
+  <?php
+  echo "<h2>PHP is Fun!</h2>";
+  echo "Hello world!<br>";
+  echo("I'm about to learn PHP!<br>");
+  echo "This ", "string ", "was ", "made ", "with multiple parameters.";
+  ?>
+
+  <?=
+  "Hello World!!!", "How are you?";
+  ?>
+
+  <?php
+  $txt1 = "Learn PHP!";
+  $txt2 = "HOME";
+  echo "<h2>", $txt1, "</h2>";
+  print "<h2>" . $txt1 . "</h2>";
+  print "Study PHP at " . $txt2 . "<br>";
+  ?>
 
 </body>
 
 </html>
-
-<?php
-echo "<p>This is a new paragraph tag I added!!</p>";
-?>
-<?php
-function myTest2()
-{
-  static $x = 0;
-  echo $x;
-  $x++;
-}
-
-myTest2();
-myTest2();
-myTest2();
-?>

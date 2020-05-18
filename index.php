@@ -4,6 +4,7 @@ $x = 5; // global scope
 function myTest()
 {
   $x = 10;
+  global $x;
   // using x inside this function will generate an error
   echo "<p>Variable x inside function is: $x</p>";
 }
@@ -13,6 +14,8 @@ echo "<p>Variable x outside function is: $x</p>";
 
 $coLor = "yellow";
 $color = "red";
+
+$color = "notred";
 ?>
 
 <!DOCTYPE html>
@@ -42,4 +45,16 @@ $color = "red";
 
 <?php
 echo "<p>This is a new paragraph tag I added!!</p>";
+?>
+<?php
+function myTest2()
+{
+  static $x = 0;
+  echo $x;
+  $x++;
+}
+
+myTest2();
+myTest2();
+myTest2();
 ?>

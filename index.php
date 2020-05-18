@@ -1,19 +1,45 @@
 <?php
+$x = 5; // global scope
 
-  // echo "hello world";
+function myTest()
+{
+  $x = 10;
+  // using x inside this function will generate an error
+  echo "<p>Variable x inside function is: $x</p>";
+}
+myTest();
 
+echo "<p>Variable x outside function is: $x</p>";
+
+$coLor = "yellow";
+$color = "red";
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First PHP File</title>
+  <title>PHP Tutorials</title>
 </head>
+
 <body>
 
-  <h1><?php echo "hello world!"; ?></h1>
-  
+  <h1>User Profile Page</h1>
+
+  <p>
+    <?php
+    echo "My car is <b>" . $color . "</b>.<br>";
+    echo "My car is " . $coLor . ".<br>";
+    echo "My car is $color.";
+    ?>
+  </p>
+
 </body>
+
 </html>
+
+<?php
+echo "<p>This is a new paragraph tag I added!!</p>";
+?>

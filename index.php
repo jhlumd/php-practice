@@ -1,3 +1,13 @@
+<?php
+
+declare(strict_types=1); // strict requirement
+function addNumbers(float $a, float $b): int
+{
+  return (int) ($a + $b);
+}
+echo addNumbers(1.2, 5.2);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,23 +18,6 @@
 </head>
 
 <body>
-
-  <?php
-  $arr = array(5 => 1, 12 => 2);
-
-  $arr[] = 56;    // This is the same as $arr[13] = 56;
-  // at this point of the script
-
-  $arr["x"] = 42; // This adds a new element to
-  // the array with key "x"
-
-  unset($arr[5]); // This removes the element from the array
-  var_dump($arr);
-
-  unset($arr);    // This deletes the whole array
-  echo "<br>";
-  var_dump($arr);
-  ?>
 
 </body>
 

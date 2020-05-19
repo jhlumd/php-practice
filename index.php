@@ -9,19 +9,20 @@
 
 <body>
 
-  <h1>User Profile Page</h1>
-
   <?php
-  $t = date("H");
+  $array = array(
+    "foo" => "bar",
+    42    => 24,
+    "multi" => array(
+      "dimensional" => array(
+        "array" => "foo"
+      )
+    )
+  );
 
-  if ($t < "10") {
-    echo "Have a good morning!";
-  } elseif ($t < "20") {
-    echo "Have a good day!";
-  } else {
-    echo "Have a good night!";
-  }
-  echo "<br>", $t;
+  var_dump($array["foo"]);
+  var_dump($array[42]);
+  var_dump($array["multi"]["dimensional"]["array"]);
   ?>
 
 </body>

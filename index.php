@@ -1,13 +1,3 @@
-<?php
-
-declare(strict_types=1); // strict requirement
-function addNumbers(float $a, float $b): int
-{
-  return (int) ($a + $b);
-}
-echo addNumbers(1.2, 5.2);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +8,22 @@ echo addNumbers(1.2, 5.2);
 </head>
 
 <body>
+
+  <?php
+  $temp_files = array(
+    "temp15.txt", "temp10.txt",
+    "temp1.txt", "temp22.txt", "temp2.txt"
+  );
+
+  sort($temp_files);
+  echo "Standard sorting: ";
+  print_r($temp_files);
+  echo "<br>";
+
+  natsort($temp_files);
+  echo "Natural order: ";
+  print_r($temp_files);
+  ?>
 
 </body>
 

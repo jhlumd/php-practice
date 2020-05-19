@@ -12,22 +12,16 @@
   <h1>User Profile Page</h1>
 
   <?php
-  echo "<h2>PHP is Fun!</h2>";
-  echo "Hello world!<br>";
-  echo("I'm about to learn PHP!<br>");
-  echo "This ", "string ", "was ", "made ", "with multiple parameters.";
-  ?>
+  $t = date("H");
 
-  <?=
-  "Hello World!!!", "How are you?";
-  ?>
-
-  <?php
-  $txt1 = "Learn PHP!";
-  $txt2 = "HOME";
-  echo "<h2>", $txt1, "</h2>";
-  print "<h2>" . $txt1 . "</h2>";
-  print "Study PHP at " . $txt2 . "<br>";
+  if ($t < "10") {
+    echo "Have a good morning!";
+  } elseif ($t < "20") {
+    echo "Have a good day!";
+  } else {
+    echo "Have a good night!";
+  }
+  echo "<br>", $t;
   ?>
 
 </body>

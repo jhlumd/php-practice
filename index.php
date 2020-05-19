@@ -1,12 +1,12 @@
-<?php 
+ <?php
 
 ?>
 
-<!DOCTYPE html>
-<html>
-	
-	<?php include('templates/header.php'); ?>
+ <!DOCTYPE html>
+ <html>
 
-	<?php include('templates/footer.php'); ?>
+ <?= include('templates/header.php'); ?>
 
-</html>
+ <?= include('templates/footer.php'); ?>
+
+ </html>

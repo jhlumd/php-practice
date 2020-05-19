@@ -9,20 +9,26 @@
 
 <body>
 
+  <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+    Name: <input type="text" name="fname">
+    <input type="submit">
+  </form>
+
   <?php
-  $temp_files = array(
-    "temp15.txt", "temp10.txt",
-    "temp1.txt", "temp22.txt", "temp2.txt"
-  );
-
-  sort($temp_files);
-  echo "Standard sorting: ";
-  print_r($temp_files);
-  echo "<br>";
-
-  natsort($temp_files);
-  echo "Natural order: ";
-  print_r($temp_files);
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // collect value of input field
+    $name = $_REQUEST['fname'];
+    echo "<br>";
+    print_r($_REQUEST);
+    echo "<br>";
+    print_r($_POST);
+    echo "<br>";
+    if (empty($name)) {
+      echo "Name is empty";
+    } else {
+      echo $name;
+    }
+  }
   ?>
 
 </body>
